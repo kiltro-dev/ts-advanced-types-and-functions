@@ -11,3 +11,8 @@ export interface CreateProductDto extends Omit<Product, ProductOmit> {
 export interface UpdateProductDto extends Partial<CreateProductDto> {}
 
 // type example2 = Required<Product>;
+
+export interface FindProductDto
+  extends Readonly<Partial<Omit<Product, 'category'>>> {
+  categoryId?: string;
+}
