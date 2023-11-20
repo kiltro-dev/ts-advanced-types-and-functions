@@ -26,4 +26,4 @@ const product = products[0];
 
 console.log(updateProduct(product.id, { title: 'New Title', stock: 80 }));
 
-findProducts({ stock: 10, color: 'red' });
+findProducts({ stock: 10, color: 'red', tags: ['bla', 'bla'] });

@@ -36,5 +36,7 @@ export const updateProduct = (
 };
 
 export const findProducts = (dto: FindProductDto): Product[] => {
+  // dto.tags = []
+  // dto.tags?.push('1');
   return products;
 };

@@ -13,6 +13,7 @@ export interface UpdateProductDto extends Partial<CreateProductDto> {}
 // type example2 = Required<Product>;
 
 export interface FindProductDto
-  extends Readonly<Partial<Omit<Product, 'category'>>> {
-  categoryId?: string;
+  extends Readonly<Partial<Omit<Product, 'category' | 'tags'>>> {
+  readonly categoryId?: string;
+  readonly tags?: ReadonlyArray<string>;
 }
